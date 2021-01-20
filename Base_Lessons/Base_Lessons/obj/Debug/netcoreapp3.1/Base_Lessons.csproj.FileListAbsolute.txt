@@ -1,0 +1,12 @@
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\bin\Debug\netcoreapp3.1\Base_Lessons.exe
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\bin\Debug\netcoreapp3.1\Base_Lessons.deps.json
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\bin\Debug\netcoreapp3.1\Base_Lessons.runtimeconfig.json
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\bin\Debug\netcoreapp3.1\Base_Lessons.runtimeconfig.dev.json
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\bin\Debug\netcoreapp3.1\Base_Lessons.dll
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\bin\Debug\netcoreapp3.1\Base_Lessons.pdb
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.AssemblyInfoInputs.cache
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.AssemblyInfo.cs
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.csproj.CoreCompileInputs.cache
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.dll
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.pdb
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.genruntimeconfig.cache
