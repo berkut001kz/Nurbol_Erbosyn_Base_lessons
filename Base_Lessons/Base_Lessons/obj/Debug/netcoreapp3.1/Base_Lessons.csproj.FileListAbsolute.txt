@@ -10,3 +10,4 @@ C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol
 C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.dll
 C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.pdb
 C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.genruntimeconfig.cache
+C:\Users\KK\Documents\Visual Studio 2019\Projects\Lessions\GithupProjects\Nurbol_Erbosyn_lessons\Base_Lessons\Base_Lessons\obj\Debug\netcoreapp3.1\Base_Lessons.csprojAssemblyReference.cache

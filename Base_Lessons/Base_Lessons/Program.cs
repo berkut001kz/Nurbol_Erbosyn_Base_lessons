@@ -6,6 +6,9 @@ namespace Base_Lessons
     {
         static void Main(string[] args)
         {
+
+
+
             // Деректерді түрлендіру - Data conversion
 
             //#1.1 Жасырын түрлендіру(автоматты түрде) - Implicit Casting (automatically)
@@ -28,6 +31,13 @@ namespace Base_Lessons
 
 
             // Деректерді түрлендіру соңы - Data conversion end.
+
+
+
+            //#1 Try / Catch / Finally - Түсініктеме - Сабағы
+            Try_Catch_Finally.TryCatchFinally();
+            //#1 Try / Catch / Finally - Түсініктеме - Сабағы соңы.
+
         }
     }
 }
