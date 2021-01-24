@@ -35,8 +35,17 @@ namespace Base_Lessons
 
 
             //#1 Try / Catch / Finally - Түсініктеме - Сабағы
-            Try_Catch_Finally.TryCatchFinally();
+            //Try_Catch_Finally.TryCatchFinally();
             //#1 Try / Catch / Finally - Түсініктеме - Сабағы соңы.
+
+
+            //Тізбектер (arrays)
+
+            //#1 Тізбектер (arrays)
+            Arrays.InfoArrays();
+
+
+            //Тізбектер (arrays) соңы.
 
         }
     }
