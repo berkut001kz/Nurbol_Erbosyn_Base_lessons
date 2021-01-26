@@ -6,30 +6,45 @@ namespace Base_Lessons
 {
     class Arrays
     {
+
+
         /*
          Мәзір
+
+        Тізбектер бірөлшемді, көпөлшемді немесе тегіс емес болуы мүмкін.
+        An array can be Single-Dimensional, Multidimensional or Jagged.
+
+        Тізбектер 3-ке бөлінеді 
+        #1 Бір өлшемді Тізбектер (Single-Dimensional Arrays)
+        #2 Көп-өлшемді Тізбектер(Multidimensional Arrays)
+        #3 Аралық тізбектер(Jagged Arrays)
             
-            #1 Бір өлшемді Тізбектер (arrays)
+            #1 Бір өлшемді Тізбектер (Single-Dimensional Arrays)
                 #1.1 Мысал 1 - Кілт-сандар және әдепкі мәні
                 #1.2 Мысал 2 - Тізбектерге мән тағайындау
                 #1.3 Мысал 3 - Бірден мәнің тағайындаса болады
                 #1.4 Мысал 4 - for арқылы мән тағайындау
                 #1.5 Мысал 5 - String түріндегі дерек қорымен Array(Тізбекке) мән тағайындау
+            #2 Көп-өлшемді Тізбектер(Multidimensional Arrays)
+                #2.1 Екі-өлшемді тізбектер
+                #2.2 Үш-өлшемді тізбектер
+            #3 Аралық тізбектер(Jagged arrays)
+            #4 foreach ілмегін пайдаланып тізбектердін мәнің оңай шығару
+            #5 Array - өзіндік әдістері бар Array class-сын пайдалану
+                
          
          */
 
 
 
-        //#1 Бір өлшемді Тізбектер (arrays)
+        //#1 Бір өлшемді Тізбектер (Single-Dimensional Arrays)
 
-        public static void InfoArrays()
+        public static void SingleDimensional_Arrays()
         {
 
-            // Қазақ әріптерін дұрыс шығару үшін қажет
-            Console.OutputEncoding = Encoding.UTF8;
 
             Console.WriteLine("");
-            Console.WriteLine("#1 Тізбектер (arrays)"); //
+            Console.WriteLine("#1 Бір өлшемді Тізбектер (Single-Dimensional Arrays)"); //
 
 
             //#1.1 Мысал 1 - Кілт-сандар және әдепкі мәні
@@ -161,6 +176,342 @@ namespace Base_Lessons
             // Тізімнең Есімді шығару үшін кейдесоқ түскен санды сақтаған айнымалыны пайдаланыамыз келесіндей - Әр қосылғанда есім өзгеріп отырады
             Console.WriteLine("Есімі: " + names[index] + " - " + "Кейдесоқ түскен сан: " + index);
         }
+
+
+
+
+
+
+        //#2 Көп-өлшемді Тізбектер(Multidimensional Arrays)
+
+        public static void Multidimensional_Arrays()
+        {
+
+
+            //#2 Көп-өлшемді Тізбектер(Multidimensional Arrays)
+            Console.WriteLine("");
+            Console.WriteLine("#2 Көп-өлшемді Тізбектер(Multidimensional Arrays)");
+
+
+
+            //#2.1 Екі-өлшемді тізбектер
+            Console.WriteLine("");
+            Console.WriteLine("#2.1 Екі-өлшемді тізбектер");
+
+            /*
+             Екі-өлшемді тізбекттерді 2D Сурет сызғанда қолдануға болады
+             */
+
+
+
+
+
+            //Мысал 1 - Алдымен тізбекттерді жариялаймыз сосын мән тағайындаймыз - Екі-өлшемді тізбектер
+            Console.WriteLine("");
+            Console.WriteLine("Мысал 1 - Алдымен тізбекттерді жариялаймыз сосын мән тағайындаймыз - Екі-өлшемді тізбектер");
+
+            // Екі-өлшемді тізбектерді жариялаңыз.
+            int[,] multiDimensionalArray1 = new int[4, 2]; //int[4, 2] - Осы жерде 4 ұяшық олардын ішінде 2 ұяшықтан сол екі ұяшыққа мән тағайындалады
+
+            
+            //Мән тағайындау - Екі-өлшемді тізбектер
+
+            multiDimensionalArray1[0,0] = 1;
+            multiDimensionalArray1[0,1] = 1;
+
+            multiDimensionalArray1[1,0] = 2;
+            multiDimensionalArray1[1,1] = 8;
+
+            multiDimensionalArray1[2,0] = 11;
+            multiDimensionalArray1[2,1] = 111;
+
+
+
+            //GetLength - деген қай ұяшықтын(бірінші ұяшық немесе екінші ұяшық екенің аңықтап) ұзындығын алу үшін керек
+
+            // Екі-өлшемді тізбектін мәнің Оқу(Шығару)
+            for (int i = 0; i < multiDimensionalArray1.GetLength(0); i++) // Осы жерде бірінші ұяшықтын ұзындығын алдық - біздін жағдайда 4
+            {
+                for (int j = 0; j < multiDimensionalArray1.GetLength(1); j++)// Осы жерде екінші ұяшықтын ұзындығын алдық - біздін жағдайда 2
+                {
+                    Console.Write(multiDimensionalArray1[i,j] + " \t");
+                }
+                Console.WriteLine("");
+            }
+
+
+
+
+
+
+
+            // Мысал 2 - Тізбектерді жариялаймыз және бірден мән тағайындаймыз - Екі-өлшемді тізбектер
+            Console.WriteLine("");
+            Console.WriteLine("Мысал 2 - Тізбекті жариялаймыз және бірден мән тағайындаймыз - Екі-өлшемді тізбектер");
+
+            // Бірден мән тағайындаудын кемшілігі сосын оны өзгерту мүмкін емес
+
+
+            // Екі-өлшемді тізбектер - Two-dimensional array.
+            int[,] array2D = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+            // Өлшемдері көрсетілген бірдей тізбектер - The same array with dimensions specified.
+            int[,] array2Da = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+            // Жол элементтері бар ұқсас тізбектер - A similar array with string elements.
+            string[,] array2Db = new string[3, 2] { { "one", "two" }, { "three", "four" }, { "five", "six" } };
+
+
+            // сосын өзгерту қате
+            //array2D = { { 0, 1 }, { 2, 3 }, { 6, 5 }, { 8, 7 } }; // Қате
+            //array2Da = { { 0, 1 }, { 2, 3 }, { 6, 5 }, { 8, 7 } }; // Қате
+            //array2Db = { { "onetwo", "two" }, { "threethree", "fourfour" }, { "fivefive", "six" } }; // Қате
+
+
+            // Екі-өлшемді тізбектін мәнің Оқу(Шығару) - ілмексіз(for) оқу 
+            Console.WriteLine(array2D[0, 0]);
+            Console.WriteLine(array2D[0, 1]);
+            Console.WriteLine(array2D[1, 0]);
+            Console.WriteLine(array2D[1, 1]);
+            Console.WriteLine(array2Da[3, 0]);
+            Console.WriteLine(array2Db[1, 0]);
+
+
+
+
+
+
+
+
+            //#2.2 Үш-өлшемді тізбектер
+            /*
+             Үш-өлшемді тізбекттерді 3D Сурет сызғанда қолдануға болады
+             */
+            Console.WriteLine("");
+            Console.WriteLine("#2.2 Үш-өлшемді тізбектер");
+
+
+
+
+
+            // Мысал 1 - Үш-өлшемді тізбекттерді жариялаңыз - Алдымен тізбекттерді жариялаймыз сосын мән тағайындаймыз
+            Console.WriteLine("");
+            Console.WriteLine("Мысал 1 - Үш-өлшемді тізбекттерді жариялаңыз - Алдымен тізбекттерді жариялаймыз сосын мән тағайындаймыз");
+
+            //Үш-өлшемді тізбекттерді жариялаңыз
+            int[,,] multiDimensionalArray2 = new int[4, 2, 3];//int[4, 2, 3] - Осы жерде 4 ұяшық олардын ішінде 2 ұяшықтан сол екі ұяшықтын ішінде тағы 3 ұяшық сол үш ұяшыққа мән тағайындалады
+
+
+            //Үш-өлшемді тізбектер мән тағайындау
+
+            multiDimensionalArray2[0, 0, 0] = 001;
+            multiDimensionalArray2[0, 0, 1] = 002;
+            multiDimensionalArray2[0, 0, 2] = 003;
+            multiDimensionalArray2[0, 1, 0] = 011;
+            multiDimensionalArray2[0, 1, 1] = 012;
+            multiDimensionalArray2[0, 1, 2] = 013;
+
+            multiDimensionalArray2[1, 0, 0] = 101;
+            multiDimensionalArray2[1, 0, 1] = 102;
+            multiDimensionalArray2[1, 0, 2] = 103;
+            multiDimensionalArray2[1, 1, 0] = 111;
+            multiDimensionalArray2[1, 1, 1] = 112;
+            multiDimensionalArray2[1, 1, 2] = 113;
+
+            multiDimensionalArray2[2, 0, 0] = 201;
+            multiDimensionalArray2[2, 0, 1] = 202;
+            multiDimensionalArray2[2, 0, 2] = 203;
+            multiDimensionalArray2[2, 1, 0] = 211;
+            multiDimensionalArray2[2, 1, 1] = 212;
+            multiDimensionalArray2[2, 1, 2] = 213;
+
+
+
+
+
+
+
+            // Мысал 2 - Тізбекттерді жариялаймыз және бірден мән тағайындаймыз - Үш-өлшемді тізбектер
+            Console.WriteLine("");
+            Console.WriteLine("Мысал 2 - Тізбекттерді жариялаймыз және бірден мән тағайындаймыз - Үш-өлшемді тізбектер");
+
+
+            // Бірден мән тағайындаудын кемшілігі сосын оны өзгерту мүмкін емес
+
+
+            // Үш-өлшемді тізбектер - Three-dimensional array.
+            int[,,] array3D = new int[,,] { { { 1, 2, 3 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } };
+            // Өлшемдері көрсетілген бірдей тізбектер - The same array with dimensions specified.
+            int[,,] array3Da = new int[2, 2, 3] { { { 1, 2, 3 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } };
+
+
+            // сосын өзгерту қате
+            //array3D = { { { 11, 22, 33 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } }; // Қате
+            //array3Da = { { { 111, 222, 333 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } }; // Қате
+
+
+            // Үш-өлшемді тізбектін мәнің Оқу(Шығару) - ілмексіз(for) оқу 
+            Console.WriteLine(array3Da[1, 0, 1]);
+            Console.WriteLine(array3D[1, 1, 2]);
+
+
+            //Элементтердің жалпы санын немесе берілген өлшемнің ұзындығын алу.
+            var allLength = array3D.Length;
+            var total = 1;
+            for (int i = 0; i < array3D.Rank; i++)
+            {
+                total *= array3D.GetLength(i);
+            }
+            Console.WriteLine("{0} equals {1}", allLength, total);
+
+        }
+
+
+
+
+        //#3 Аралық тізбектер(Jagged arrays)
+
+        public static void Jagged_Arrays()
+        {
+
+
+            //#3 Аралық тізбектер(Jagged arrays)
+            Console.WriteLine("");
+            Console.WriteLine("#3 Аралық тізбектер(Jagged arrays)");
+
+
+
+            /* Аралық тізбектер дегеніміз тізбектін ішіне тізбектер жазылғаны 
+             
+             Мысал 1*/
+            Console.WriteLine("");
+            Console.WriteLine("Мысал 1 - Аралық тізбектер дегеніміз тізбектін ішіне тізбектер жазылғаны ");
+
+            // Аралық тізбектерді жариялаймыз.
+            int[][] scores = new int[3][];
+
+            // Аралық тізбектерге мән тағайындаймыз.
+            scores[0] = new int[] { 98, 68, 77 }; // Мұрат - Математикадан 98балл, Физикадан 68балл, Тарихтан 77балл алды
+            scores[1] = new int[] { 99, 55, 80 }; // Асан - Математикадан 99балл, Физикадан 55балл, Тарихтан 80балл алды
+            scores[2] = new int[] { 89, 86 }; // Ақжол - Математикадан 89балл, Физикадан 86балл, Тарих сабағына келмеді
+
+            // Аралық тізбектердін мәнің Оқу(Шығару)
+            for (int i = 0;i < scores.Length;i++)
+            {
+                for (int j = 0;j < scores[i].Length;j++)
+                {
+                    Console.Write(scores[i][j] + "\t");
+                }
+                Console.WriteLine("");
+            }
+
+            //Мысал 2 - Қысқартып жазу
+
+            Console.WriteLine("");
+            Console.WriteLine("Мысал 2 - Қысқартып жазу");
+
+            // Аралық тізбектерді жариялаймыз және бірден мән тағайындаймыз.
+            int[][] scores2 = new int[3][] { 
+                new int[] { 98, 68, 77 }, 
+                new int[] { 99, 55, 80 }, 
+                new int[] { 89, 86 } 
+            };
+
+            // Аралық тізбектердін мәнің Оқу(Шығару)
+            for (int i = 0; i < scores2.Length; i++)
+            {
+                for (int j = 0; j < scores2[i].Length; j++)
+                {
+                    Console.Write(scores2[i][j] + "\t");
+                }
+                Console.WriteLine("");
+            }
+
+            //Мысал 3 - Аралық тізбектерде бірден мән тағайындағанда мәнді өзгертуге болады.
+            Console.WriteLine("");
+            Console.WriteLine("Мысал 3 - Аралық тізбектерде бірден мән тағайындағанда мәнді өзгертуге болады.");
+
+            //мәнді өзгерту
+            scores2[0] = new int[] { 10, 50, 30 };
+
+            // Аралық тізбектердін мәнің Оқу(Шығару)
+            for (int i = 0; i < scores2.Length; i++)
+            {
+                for (int j = 0; j < scores2[i].Length; j++)
+                {
+                    Console.Write(scores2[i][j] + "\t");
+                }
+                Console.WriteLine("");
+            }
+        }
+
+
+        //#4 foreach ілмегін пайдаланып тізбектердін мәнің оңай шығару
+
+        public static void Foreach_Array()
+        {
+            //#4 foreach ілмегін пайдаланып тізбектердін мәнің оңай шығару
+            Console.WriteLine("");
+            Console.WriteLine("#4 foreach ілмегін пайдаланып тізбектердін мәнің оңай шығару");
+
+
+            int[] numbers = new int[5] { 50, 88, 66, 77, 99 };
+
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+
+        }
+
+        //#5 Array - өзіндік әдістері бар Array class-сын пайдалану
+
+        public static void SystemMethods_Array()
+        {
+
+            //#5 Array - өзіндік әдістері бар Array class-сын пайдалану
+            Console.WriteLine("");
+            Console.WriteLine("#5 Array - өзіндік әдістері бар Array class-сын пайдалану");
+
+
+            int[] numbers = new int[5] { 1, 8, 99, 7, 66 };
+
+            //Array class-сынның әдістері
+
+            //Array.Sort(numbers); // output: 1 7 8 66 99 - Сандарды сұрыптап беру ең кіші сандардан бастап
+
+            //Array.Reverse(numbers); // output: 99 66 8 7 1 - Сандарды сұрыптап беру ең үлкен сандардан бастап
+
+            Console.WriteLine("");
+            Console.WriteLine("Array class-сынның әдістері Array.Sort(numbers) және Array.Reverse(numbers);");
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+
+            //Array-да көптеген дайын әдістері бар алдағы уақытта қолданымыз 
+
+            // Бір тізбектен екінші тізбекке көшіру әдісін қолданып көрейік
+
+            int[] numbers2 = new int[3];
+            Array.Copy(numbers, 0, numbers2,0, 3); // output: 1 8 99 
+
+            Console.WriteLine("");
+            Console.WriteLine("Array class-сынның әдістері Бір тізбектен екінші тізбекке көшіру әдісін қолданып көрейік");
+            foreach (int number in numbers2)
+            {
+                Console.WriteLine(number);
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("foreach қысқартып жазу Array әдісі арқылы");
+            //foreach қысқартып жазу Array әдісі арқылы
+            Array.ForEach(numbers2, number => Console.WriteLine(number));
+
+
+            // Қосымша әдістерді көру үшін гуглге system.array in C# деп іздесеніз шығарып береді
+            // https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0 - Қосымша әдістер
+        }
+
+
 
     }
 }
