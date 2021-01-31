@@ -85,10 +85,15 @@ namespace Base_Lessons
 
 
             //#2 Файлдармен жұмыс істеу (Working with files)
-            File_info.workingWithFiles();
+            //File_info.workingWithFiles();
 
 
             //Файлдармен жұмыс соңы. --------------------------------------------------------------------------------
+
+
+
+            //Қортынды
+            Result.MainWindow();
 
 
         }
