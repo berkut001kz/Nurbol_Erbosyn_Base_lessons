@@ -30,7 +30,8 @@ namespace Base_Lessons
 
         private string login;
         private string password;
-        static string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+        //static string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+        static string path = "E:\\";
         static string directory = Path.Combine(path, "File_info_class");
         static string file = Path.Combine(directory, "users.txt");
 
@@ -79,20 +80,21 @@ namespace Base_Lessons
         /// </summary>
         public void Register()
         {
-            Console.WriteLine("Тіркелу");
+            Console.WriteLine("##############----Тіркелу----##############");
             
 
             try
             {
                 Console.Write("Ойдан логин жазыңыз: ");
                 login = Console.ReadLine();
+                // "H" немесе "h" батырмасын басу арқылы бастапқы бетке қайту
+                if (login == "H" || login == "h") Result.MainWindow();
 
                 Console.Write("Ойдан пароль жазыңыз: ");
                 password = Console.ReadLine();
 
                 // "H" немесе "h" батырмасын басу арқылы бастапқы бетке қайту
-                if (login == "h" || password == "h") Result.MainWindow();
-                if (login == "H" || password == "H") Result.MainWindow();
+                if (password == "H" || password == "h") Result.MainWindow();
 
                 //Файл бар болса
                 if (File.Exists(file))
@@ -114,7 +116,7 @@ namespace Base_Lessons
                         // Логин және Пароль бар жоғын тексеру - бар болса қате шығару
                         if (login == login2)
                         {
-                            throw new Exception("Бұл логин бос емес");
+                            throw new Exception("##############----Бұл логин бос емес----##############");
                             new Result().Register();
                         }
                         
@@ -183,18 +185,31 @@ namespace Base_Lessons
         public void Login()
         {
             Console.WriteLine("Бастапқы бетке қайту үшін \"H\" батырмасын басыңыз!!!");
-            Console.WriteLine("Кіру");
+            Console.WriteLine("##############----Кіру----##############");
             Console.Write("Тіркелген логинды жазыңыз:");
+
+
             string loginUser = Console.ReadLine();
+            // "H" немесе "h" батырмасын басу арқылы бастапқы бетке қайту
+            if (loginUser == "H" || loginUser == "h") Result.MainWindow();
 
             Console.Write("Тіркелген парольды жазыңыз:");
             string passwordUser = Console.ReadLine();
-
-            string[] user = File.ReadAllLines(file,Encoding.UTF8);
-
             // "H" немесе "h" батырмасын басу арқылы бастапқы бетке қайту
-            if (loginUser == "h" || passwordUser == "h") Result.MainWindow(); 
-            if (loginUser == "H" || passwordUser == "H") Result.MainWindow();
+            if (passwordUser == "H" || passwordUser == "h") Result.MainWindow();
+
+            
+            //Файл жоқ болса
+            if (!File.Exists(file))
+            {
+                Console.WriteLine("##############----Сіз тіркелмегенсіз!!!----################");
+                Result registerUser = new Result();
+                registerUser.Register();
+            }
+
+            // Файлдағы барлық жазбаны жол-жол бойынша тізбекке салу
+            string[] user = File.ReadAllLines(file, Encoding.UTF8);
+
 
 
             // Логин,Пароль сақталған файлда барма жоқпа тексеру
@@ -228,7 +243,7 @@ namespace Base_Lessons
             }
             else
             {
-                Console.WriteLine("Логин немесе Пароль қате");
+                Console.WriteLine("ҚАТЕ: Логин немесе Пароль қате");
 
                 // Қайтадан Логин және Пароль сұрау
                 Result registerUser = new Result();
