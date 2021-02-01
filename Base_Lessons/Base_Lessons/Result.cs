@@ -30,8 +30,8 @@ namespace Base_Lessons
 
         private string login;
         private string password;
-        //static string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-        static string path = "E:\\";
+        static string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+        //static string path = "E:\\";
         static string directory = Path.Combine(path, "File_info_class");
         static string file = Path.Combine(directory, "users.txt");
 
